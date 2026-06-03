@@ -23,11 +23,11 @@ project/
 
 1. Create a virtual environment
 
-   python -m venv venv
+   python -m venv myenv
 
 2. Activate the environment
 
-   venv\Scripts\activate
+   myenv\Scripts\activate
 
 3. Install dependencies
 
