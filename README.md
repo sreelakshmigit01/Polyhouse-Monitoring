@@ -1,86 +1,46 @@
-Environment Setup
+# Polyhouse Monitoring Project
 
+## Problem Statement
 
+This project focuses on monitoring polyhouse environmental conditions such as temperature, humidity, CO₂ levels, and crop yield. The objective is to build a reproducible data science workflow for collecting, processing, and analyzing sensor data for agritech applications.
 
-1\. Create a virtual environment named `venv` inside the project folder:
+## Folder Structure
 
+project/
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+├── notebooks/
+├── src/
+├── models/
+├── smoke_test.py
+├── requirements.txt
+├── .gitignore
+└── README.md
 
+## Environment Setup
 
-&nbsp;  python -m venv venv
+1. Create a virtual environment
 
+   python -m venv venv
 
+2. Activate the environment
 
-2\. Activate the virtual environment:
+   venv\Scripts\activate
 
+3. Install dependencies
 
+   pip install -r requirements.txt
 
-&nbsp;  venv\\Scripts\\activate
+4. Run the smoke test
 
+   python smoke_test.py
 
+## Dependencies
 
-&nbsp;  Successful activation displays:
+The project dependencies are listed in requirements.txt.
 
+## Version Control
 
-
-&nbsp;  (venv) C:\\Users\\Lenovo\\MyProject>
-
-
-
-3\. Install the required packages:
-
-
-
-&nbsp;  pip install pandas numpy matplotlib scikit-learn jupyter
-
-
-
-4\. Verify the installed packages:
-
-
-
-&nbsp;  pip list
-
-
-
-5\. Run the smoke test:
-
-
-
-&nbsp;  python smoke\_test.py
-
-
-
-Smoke Test
-
-
-
-The smoke test loads a sample sensor dictionary and prints formatted sensor values.
-
-
-
-Expected output:
-
-
-
-Polyhouse sensor snapshot:
-
-date: YYYY-MM-DD
-
-temperature\_c: 22.4
-
-humidity\_pct: 88.5
-
-co2\_ppm: 950
-
-yield\_kg: 12.3
-
-
-
-Environment OK.
-
-
-
-If "Environment OK." is displayed, the Python environment and project setup are functioning correctly.
-
-
-
+Git is used for version control. The repository is hosted on GitHub and all project changes are tracked through commits.
