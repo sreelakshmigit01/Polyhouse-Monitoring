@@ -1,3 +1,4 @@
+# Smoke test for environment verification
 # src/smoke_test.py
 from datetime import date
 
