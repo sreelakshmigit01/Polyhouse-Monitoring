@@ -44,3 +44,20 @@ The project dependencies are listed in requirements.txt.
 ## Version Control
 
 Git is used for version control. The repository is hosted on GitHub and all project changes are tracked through commits.
+
+#Dataset Columns
+
+timestamp:
+Date and time when sensor reading was recorded.
+
+temperature_c:
+Polyhouse temperature in degrees Celsius.
+
+humidity_pct:
+Relative humidity percentage.
+
+co2_ppm:
+Carbon dioxide concentration in parts per million.
+
+yield_kg:
+Harvested mushroom yield in kilograms.
