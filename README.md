@@ -61,3 +61,26 @@ Carbon dioxide concentration in parts per million.
 
 yield_kg:
 Harvested mushroom yield in kilograms.
+
+
+#Feature Engineering
+
+Features Used:
+1. temperature_c
+2. humidity_pct
+3. co2_ppm
+4. temp_humid_interaction
+
+Formula:
+temp_humid_interaction =
+temperature_c × humidity_pct / 100
+
+Target:
+yield_kg
+
+Scaler:
+MinMaxScaler
+
+Outputs:
+data/processed/features.parquet
+models/minmax_scaler.joblib
