@@ -84,3 +84,45 @@ MinMaxScaler
 Outputs:
 data/processed/features.parquet
 models/minmax_scaler.joblib
+
+### Train/Test Split
+
+### Split Method
+
+A chronological 80/20 train-test split was used to preserve temporal order and prevent future information from influencing model training.
+
+### Features
+
+* temperature_c
+* humidity_pct
+* co2_ppm
+
+### Target
+
+* yield_kg
+
+### Dataset Size
+
+* Total Rows: 365
+* Training Rows: 292
+* Testing Rows: 73
+
+### Date Ranges
+
+* Training Period: 2024-01-01 00:00:00 → 2024-10-18 00:00:00
+* Testing Period: Test: 2024-10-19 00:00:00 → 2024-12-30 00:00:00
+
+### Scaling
+
+MinMaxScaler was fitted on the training data only and then used to transform both training and testing datasets. This prevents data leakage from the test set.
+
+### Saved Scaler
+
+models/minmax_scaler_train.joblib
+
+###Saved Split Artifacts
+
+data/processed/X_train.parquet
+data/processed/X_test.parquet
+data/processed/y_train.parquet
+data/processed/y_test.parquet
