@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 import joblib
 
-df = pd.read_parquet("data/interim/02_cleaned.parquet").sort_values("timestamp")
+df = pd.read_parquet("data/interim/02_cleaned_1000.parquet").sort_values("timestamp")
 
 feature_cols = ["temperature_c", "humidity_pct", "co2_ppm"]
 
@@ -21,7 +21,7 @@ y_test = test["yield_kg"].values
 
 joblib.dump(
     scaler,
-    "models/minmax_scaler_train.joblib"
+    "models/minmax_scaler_train_1000.joblib"
 )
 
 # Save train/test artifacts
@@ -29,7 +29,7 @@ pd.DataFrame(
     X_train,
     columns=feature_cols
 ).to_parquet(
-    "data/processed/X_train.parquet",
+    "data/processed/X_train_1000.parquet",
     index=False
 )
 
@@ -37,21 +37,21 @@ pd.DataFrame(
     X_test,
     columns=feature_cols
 ).to_parquet(
-    "data/processed/X_test.parquet",
+    "data/processed/X_test_1000.parquet",
     index=False
 )
 
 pd.DataFrame(
     {"yield_kg": y_train}
 ).to_parquet(
-    "data/processed/y_train.parquet",
+    "data/processed/y_train_1000.parquet",
     index=False
 )
 
 pd.DataFrame(
     {"yield_kg": y_test}
 ).to_parquet(
-    "data/processed/y_test.parquet",
+    "data/processed/y_test_1000.parquet",
     index=False
 )
 
